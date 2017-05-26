@@ -1,0 +1,10 @@
+{
+    "depdicApp": {
+        "ColTyp" : {
+            "null": "",
+            "WORD": "WORD",
+            "COL": "COL",
+            "JSON": "JSON"
+        }
+    }
+}

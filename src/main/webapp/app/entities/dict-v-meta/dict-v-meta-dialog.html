@@ -1,0 +1,68 @@
+
+<form name="editForm" role="form" novalidate ng-submit="vm.save()">
+
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"
+                ng-click="vm.clear()">&times;</button>
+        <h4 class="modal-title" id="myDictVMetaLabel" data-translate="depdicApp.dictVMeta.home.createOrEditLabel">Create or edit a Dict V Meta</h4>
+    </div>
+    <div class="modal-body">
+        <jhi-alert-error></jhi-alert-error>
+        <div class="form-group" ng-show="vm.dictVMeta.id">
+            <label for="id" data-translate="global.field.id">ID</label>
+            <input type="text" class="form-control" id="id" name="id"
+                    ng-model="vm.dictVMeta.id" readonly />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="depdicApp.dictVMeta.colTyp" for="field_colTyp">Col Typ</label>
+            <select class="form-control" name="colTyp" ng-model="vm.dictVMeta.colTyp" id="field_colTyp">
+                <option value="WORD" data-translate="depdicApp.ColTyp.WORD">WORD</option>
+                <option value="COL" data-translate="depdicApp.ColTyp.COL">COL</option>
+                <option value="JSON" data-translate="depdicApp.ColTyp.JSON">JSON</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="depdicApp.dictVMeta.colKr" for="field_colKr">Col Kr</label>
+            <input type="text" class="form-control" name="colKr" id="field_colKr"
+                    ng-model="vm.dictVMeta.colKr"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="depdicApp.dictVMeta.colEn" for="field_colEn">Col En</label>
+            <input type="text" class="form-control" name="colEn" id="field_colEn"
+                    ng-model="vm.dictVMeta.colEn"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="depdicApp.dictVMeta.jsonDesc" for="field_jsonDesc">Json Desc</label>
+            <input type="text" class="form-control" name="jsonDesc" id="field_jsonDesc"
+                    ng-model="vm.dictVMeta.jsonDesc"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="depdicApp.dictVMeta.memo" for="field_memo">Memo</label>
+            <input type="text" class="form-control" name="memo" id="field_memo"
+                    ng-model="vm.dictVMeta.memo"
+                    />
+        </div>
+        <div class="form-group">
+            <label class="control-label" data-translate="depdicApp.dictVMeta.dtm" for="field_dtm">Dtm</label>
+                <div class="input-group">
+                    <input id="field_dtm" type="text" class="form-control" name="dtm" datetime-picker="{{dateformat}}" ng-model="vm.dictVMeta.dtm" is-open="vm.datePickerOpenStatus.dtm"
+                    />
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-default" ng-click="vm.openCalendar('dtm')"><i class="glyphicon glyphicon-calendar"></i></button>
+                    </span>
+                </div>
+        </div>
+
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal" ng-click="vm.clear()">
+            <span class="glyphicon glyphicon-ban-circle"></span>&nbsp;<span data-translate="entity.action.cancel">Cancel</span>
+        </button>
+        <button type="submit" ng-disabled="editForm.$invalid || vm.isSaving" class="btn btn-primary">
+            <span class="glyphicon glyphicon-save"></span>&nbsp;<span data-translate="entity.action.save">Save</span>
+        </button>
+    </div>
+</form>

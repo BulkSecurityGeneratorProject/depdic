@@ -1,0 +1,14 @@
+entity DictVMeta {
+  colTyp ColTyp,
+  colKr String,
+  colEn String,
+  jsonDesc String,
+  memo String,
+  dtm Instant
+}
+
+enum ColTyp {
+  WORD, COL, JSON
+}
+
+paginate DictVMeta with infinite-scroll

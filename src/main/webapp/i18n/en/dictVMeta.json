@@ -1,0 +1,27 @@
+{
+    "depdicApp": {
+        "dictVMeta" : {
+            "home": {
+                "title": "Dict V Metas",
+                "createLabel": "Create a new Dict V Meta",
+                "createOrEditLabel": "Create or edit a Dict V Meta",
+                "search": "Search for Dict V Meta"
+            },
+            "created": "A new Dict V Meta is created with identifier {{ param }}",
+            "updated": "A Dict V Meta is updated with identifier {{ param }}",
+            "deleted": "A Dict V Meta is deleted with identifier {{ param }}",
+            "delete": {
+                "question": "Are you sure you want to delete Dict V Meta {{ id }}?"
+            },
+            "detail": {
+                "title": "Dict V Meta"
+            },
+            "colTyp": "Col Typ",
+            "colKr": "Col Kr",
+            "colEn": "Col En",
+            "jsonDesc": "Json Desc",
+            "memo": "Memo",
+            "dtm": "Dtm"
+        }
+    }
+}

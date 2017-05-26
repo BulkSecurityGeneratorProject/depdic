@@ -1,0 +1,43 @@
+
+<div>
+    <h2><span data-translate="depdicApp.dictVMeta.detail.title">Dict V Meta</span> {{vm.dictVMeta.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="depdicApp.dictVMeta.colTyp">Col Typ</span></dt>
+        <dd>
+            <span data-translate="{{'depdicApp.ColTyp.' + vm.dictVMeta.colTyp}}">{{vm.dictVMeta.colTyp}}</span>
+        </dd>
+        <dt><span data-translate="depdicApp.dictVMeta.colKr">Col Kr</span></dt>
+        <dd>
+            <span>{{vm.dictVMeta.colKr}}</span>
+        </dd>
+        <dt><span data-translate="depdicApp.dictVMeta.colEn">Col En</span></dt>
+        <dd>
+            <span>{{vm.dictVMeta.colEn}}</span>
+        </dd>
+        <dt><span data-translate="depdicApp.dictVMeta.jsonDesc">Json Desc</span></dt>
+        <dd>
+            <span>{{vm.dictVMeta.jsonDesc}}</span>
+        </dd>
+        <dt><span data-translate="depdicApp.dictVMeta.memo">Memo</span></dt>
+        <dd>
+            <span>{{vm.dictVMeta.memo}}</span>
+        </dd>
+        <dt><span data-translate="depdicApp.dictVMeta.dtm">Dtm</span></dt>
+        <dd>
+            <span>{{vm.dictVMeta.dtm | date:'medium'}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="dict-v-meta-detail.edit({id:vm.dictVMeta.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-sm-down" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

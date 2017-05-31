@@ -1,0 +1,10 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [],
+    "changelogDate": "20170531030921",
+    "dto": "no",
+    "service": "no",
+    "entityTableName": "about",
+    "pagination": "no"
+}

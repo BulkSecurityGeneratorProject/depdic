@@ -44,6 +44,7 @@ public class CacheConfiguration {
             cm.createCache(com.skcc.lucy.domain.Authority.class.getName(), jcacheConfiguration);
             cm.createCache(com.skcc.lucy.domain.User.class.getName() + ".authorities", jcacheConfiguration);
             cm.createCache(com.skcc.lucy.domain.DictVMeta.class.getName(), jcacheConfiguration);
+            cm.createCache(com.skcc.lucy.domain.About.class.getName(), jcacheConfiguration);
             // jhipster-needle-ehcache-add-entry
         };
     }

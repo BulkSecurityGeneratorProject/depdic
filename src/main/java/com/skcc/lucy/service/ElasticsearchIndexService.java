@@ -23,6 +23,10 @@ public class ElasticsearchIndexService {
 
     private final Logger log = LoggerFactory.getLogger(ElasticsearchIndexService.class);
 
+    private final AboutRepository aboutRepository;
+
+    private final AboutSearchRepository aboutSearchRepository;
+
     private final DictVMetaRepository dictVMetaRepository;
 
     private final DictVMetaSearchRepository dictVMetaSearchRepository;
@@ -36,11 +40,15 @@ public class ElasticsearchIndexService {
     public ElasticsearchIndexService(
         UserRepository userRepository,
         UserSearchRepository userSearchRepository,
+        AboutRepository aboutRepository,
+        AboutSearchRepository aboutSearchRepository,
         DictVMetaRepository dictVMetaRepository,
         DictVMetaSearchRepository dictVMetaSearchRepository,
         ElasticsearchTemplate elasticsearchTemplate) {
         this.userRepository = userRepository;
         this.userSearchRepository = userSearchRepository;
+        this.aboutRepository = aboutRepository;
+        this.aboutSearchRepository = aboutSearchRepository;
         this.dictVMetaRepository = dictVMetaRepository;
         this.dictVMetaSearchRepository = dictVMetaSearchRepository;
         this.elasticsearchTemplate = elasticsearchTemplate;
@@ -49,6 +57,7 @@ public class ElasticsearchIndexService {
     @Async
     @Timed
     public void reindexAll() {
+        reindexForClass(About.class, aboutRepository, aboutSearchRepository);
         reindexForClass(DictVMeta.class, dictVMetaRepository, dictVMetaSearchRepository);
         reindexForClass(User.class, userRepository, userSearchRepository);
 

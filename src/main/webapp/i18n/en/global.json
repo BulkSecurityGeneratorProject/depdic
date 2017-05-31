@@ -8,6 +8,7 @@
             "entities": {
                 "main": "Entities",
                 "dictVMeta": "Dict V Meta",
+                "about": "About",
                 "jhipster-needle-menu-add-entry": "JHipster will add additional entities here (do not translate!)"
             },
             "account": {
